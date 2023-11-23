@@ -9,10 +9,7 @@ download_folder = "downloads"
 # Überprüfen, ob der Ordner existiert, andernfalls erstellen
 if not os.path.exists(download_folder):
     os.makedirs(download_folder)
-    print(f"Der Ordner '{download_folder}' wurde erstellt.")
-else:
-    print(f"Der Ordner '{download_folder}' existiert bereits.")
-
+    print(f"Folder '{download_folder}' was created.")
 
 # Funktion zum Herunterladen und Zusammenführen von Teilen
 def download_and_merge(
@@ -125,11 +122,13 @@ def download_and_merge(
 
     # Löschen der heruntergeladenen Tiles
     delete_downloaded_tiles(downloaded_parts)
-
+    
     # Schließen des Fortschrittsbalkens
     progress.close()
 
     # Erfolgsmeldung
-    print(
-        f"Der Prozess wurde erfolgreich abgeschlossen. Die Datei befindet sich unter: {output_file}"
-    )
+    print(f"Process complete. File: {output_file}")
+    
+
+
+
