@@ -73,7 +73,7 @@ def download_and_merge(
             # Fortschritt aktualisieren
             progress.update(1)
 
-    # Alle heruntergeladenen Teile zusammenführen
+    # Funktion: Alle heruntergeladenen Teile zusammenführen
     def merge_parts(parts):
         src_files_to_mosaic = [rasterio.open(part) for part in parts]
         mosaic, out_trans = merge(src_files_to_mosaic)
@@ -95,7 +95,7 @@ def download_and_merge(
     # Aufruf der Funktion zum Zusammenführen der Teile
     merge_parts(downloaded_parts)
 
-    # Bounding Box neu zuschneiden
+    # Funktion: Bounding Box Zuschnitt (entsprechend urspr. Bereich)
     def clip_to_bbox(input_file, output_file, bbox):
         with rasterio.open(input_file) as src:
             # Berechnung der Fenstergröße für den Zuschnitt
@@ -118,7 +118,7 @@ def download_and_merge(
     # Zuschnitt auf die eigentliche Bounding Box
     clip_to_bbox(output_file, output_file, full_bbox)
 
-    # Löschen der heruntergeladenen Tiles
+    # Funktion: Löschen der heruntergeladenen Tiles
     def delete_downloaded_tiles(parts):
         for part_file in parts:
             os.remove(part_file)

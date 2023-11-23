@@ -22,15 +22,16 @@ Teste z.b. mit folgenden Layern:
 
 ### Anwendung
 
-1. Installiere die erforderlichen Python-Bibliotheken, falls noch nicht geschehen:
+1. Installiere ggf. die erforderlichen Python-Bibliotheken:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-2. Passe das Skript `wms_downloader.py` an, um den Layer, CRS und die Begrenzungsrahmeninformationen anzugeben:
+2. Passe das Skript `wms_downloader.py` an, um den Layer, CRS und die Tiling-Parameter anzugeben:
 
-   - Passe die Variablen `layer_name`, `crs`, `bbox`, `tile_size` und `resolution_factor` an, um den gewünschten Parametern zu entsprechen.
+   - `wms_url` 
+   -  `layer_name`, `crs`, `bbox`, `tile_size` und `resolution_factor`
    
 3. Führe das Skript `wms_downloader.py` aus:
 

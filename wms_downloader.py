@@ -10,8 +10,6 @@ wms = WebMapService(wms_url, version='1.3.0')
 layer_name = 'geonode:levl_1999_lau2'
 crs = 'EPSG:31467'
 bbox = (3277167.5, 5233180.5, 3924737.5, 6107773.5)  # Bounding Box: miny, minx, maxy, maxx
-# width = 1000
-# height = 1000
 tile_size = 1000 # Größe der einzelnen Tiles
 resolution_factor = 100  # Anteilige Auflösung
 
