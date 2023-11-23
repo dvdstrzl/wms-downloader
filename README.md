@@ -1,12 +1,13 @@
 ## WMS Downloader
 
 Ermöglicht das Herunterladen von geografischen Rasterdaten von einem Web Map Service (WMS).
-Der gewünschte Layer wird beim Herunterladen zunächst auf seperate Tiles/Kacheln aufgeteilt, anschließend zusammengeführt und als einzelnes GeoTIFF-Format gespeichert. 
 
+Durch das Skript wird der gewünschte Layer beim Herunterladen zunächst auf seperate Kacheln (Tiles) aufgeteilt, anschließend zusammengeführt und als einzelnes GeoTIFF-Format gespeichert. 
 Die Anzahl der erforderlichen Kacheln wird dabei automatisch berechnet – basierend auf den angegebenen Parametern wie Auflösung, Kachelgröße und dem gewünschten geografischen Bereich.
+Je nach Konfiguration lassen sich GeoTIFFs in unterschiedlicher Größe und Detailgrad generieren.
 
-Das [WMS des Thünen Instituts](https://atlas.thuenen.de/geoserver/ows?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0) dient als Beispiel.
-Teste z.b. mit folgenden Layern: 
+Wurde mit [WMS des Thünen Instituts](https://atlas.thuenen.de/geoserver/ows?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0) getestet.
+Z.b. mit folgenden Layern: 
 > "geonode:levl_1999_lau2" mit BoundingBox für CRS="EPSG:31467" --> minx="5233180.5" miny="3277167.5" maxx="6107773.5" maxy="3924737.5"
 > 
 > "geonode:ctm_ger_2021_seg_v201" mit BoundingBox für CRS="EPSG:3035" --> minx="2682993.25" miny="4030317.75" maxx="3540651.75" maxy="4675025.0"
@@ -22,18 +23,18 @@ Teste z.b. mit folgenden Layern:
 
 ### Anwendung
 
-1. Installiere ggf. die erforderlichen Python-Bibliotheken:
+1. Ggf. die erforderlichen Python-Bibliotheken installieren:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-2. Passe das Skript `wms_downloader.py` an, um den Layer, CRS und die Tiling-Parameter anzugeben:
+2. `wms_downloader.py` anpassen, um den Layer, CRS und die Tiling-Parameter anzugeben:
 
    - `wms_url` 
    -  `layer_name`, `crs`, `bbox`, `tile_size` und `resolution_factor`
    
-3. Führe das Skript `wms_downloader.py` aus:
+3. `wms_downloader.py` ausführen:
 
 ```bash
 python wms_downloader.py
