@@ -2,9 +2,9 @@
 
 Ermöglicht das Herunterladen von geografischen Rasterdaten von einem Web Map Service (WMS).
 
-Durch das Skript wird der gewünschte Layer beim Herunterladen zunächst auf seperate Kacheln (Tiles) aufgeteilt, anschließend zusammengeführt und als einzelnes GeoTIFF-Format gespeichert. 
-Die Anzahl der erforderlichen Kacheln wird dabei automatisch berechnet – basierend auf den angegebenen Parametern wie Auflösung, Kachelgröße und dem gewünschten geografischen Bereich.
-Je nach Konfiguration lassen sich GeoTIFFs in unterschiedlicher Größe und Detailgrad generieren.
+Durch das Skript wird der gewünschte Layer beim Herunterladen zunächst auf seperate Kacheln (Tiles) aufgeteilt, anschließend zusammengeführt und als einzelnes GeoTIFF gespeichert. 
+Die Anzahl der erforderlichen Kacheln wird dabei automatisch berechnet – basierend auf den angegebenen Parametern wie Auflösungsfaktor, Kachelgröße und dem gewünschten geografischen Bereich (Bounding Box).
+Je nach Konfiguration lassen sich so GeoTIFFs in unterschiedlicher Größe und Detailgrad generieren.
 
 Wurde mit [WMS des Thünen Instituts](https://atlas.thuenen.de/geoserver/ows?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0) getestet.
 Z.b. mit folgenden Layern: 
